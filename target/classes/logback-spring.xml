@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy:MM:dd HH:mm:ss.SSS}  %-5level -- [%thread] %logger{35}\(%line\) : %msg %n</Pattern>
+        </layout>
+    </appender>
+    
+<!-- 	<logger name="org.springframework.web" level="INFO"/>
+	<logger name="org.thymeleaf" level="INFO"/>
+	<logger name="org.hibernate.SQL" level="INFO"/>
+	<logger name="org.quartz.core" level="INFO"/>
+	<logger name="org.h2.server.web" level="INFO"/>
+ 
+	<root level="INFO">
+		<appender-ref ref="dailyRollingFileAppender" />
+	</root> -->
+	
+    <!-- <logger name="hello" level="DEBUG" /> -->
+    <!-- <logger name="saml" level="DEBUG" /> -->
+    
+    <logger name="org.springframework" level="INFO" additivity="false">
+    	<appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="org.apache" level="INFO" additivity="false">
+    	<appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="javax" level="INFO" additivity="false" />
+    
+	<logger name="com.i2max" level="debug" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+    
+</configuration>
