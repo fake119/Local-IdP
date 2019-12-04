@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ServletInit {
 	private static Logger logger = LoggerFactory.getLogger(ServletInit.class);
 	
-	
     public static void main(String[] args) throws Exception {
     	SpringApplication.run(ServletInit.class, args);
     	
