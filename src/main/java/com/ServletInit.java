@@ -19,3 +19,5 @@ public class ServletInit {
     	logger.debug("Message logged at DEBUG level");
     }
 }
+
+
